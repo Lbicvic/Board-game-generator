@@ -1,0 +1,13 @@
+<%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <form action="/boardGames" method="post">
+            <label for="title">Title:</label>
+            <input type="text" name="title" required>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+            <button type="submit" >Add Board Game</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <div class="board-game">
+            <div class="board-game__wrapper">
+                <div class="board-game__content">
+                    <h2 class="board-game__title"><%= boardGame.title %></h2>
+                    <p class="board-game__description"><%= boardGame.description %></p>
+                </div>
+                <a class="delete-button" data-doc="<%= boardGame._id %>">Delete</a>
+            </div>
+        </div>
+    </body>
+    <script>
+        const deleteButton = document.querySelector("a.delete-button");
+        deleteButton.addEventListener("click",()=>{
+            const endpoint = `/boardGames/${deleteButton.dataset.doc}`;
+
+            fetch(endpoint,{
+                method: "DELETE"
+            }).then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch((error) =>{
+                console.log(error);
+            })
+        });
+    </script>
+</html>
