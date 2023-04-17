@@ -3,10 +3,10 @@
     <body>
         <%- include("./partials/nav.ejs") %>
         <div class="board-game">
-            <div class="board-game__wrapper">
+            <div class="board-game__wrapper layout__width">
                 <div class="board-game__content">
-                    <h2 class="board-game__title"><%= boardGame.title %></h2>
-                    <p class="board-game__description"><%= boardGame.description %></p>
+                    <h2 class="title"><%= boardGame.title %></h2>
+                    <p class="description"><%= boardGame.description %></p>
                 </div>
                 <a class="delete-button" data-doc="<%= boardGame._id %>">Delete</a>
             </div>

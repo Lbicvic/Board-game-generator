@@ -17,6 +17,9 @@ app.use(express.static(`${__dirname}/public`));
 app.get("/",(req,res) =>{
     res.redirect("/boardGames")
 })
+app.get("/about",(req,res) =>{
+    res.render("about",{ title:"About" })
+})
 app.use(boardGameRouter);
 
 (async function () {

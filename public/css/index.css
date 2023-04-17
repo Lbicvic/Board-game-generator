@@ -1,0 +1,19 @@
+.layout__width {
+  max-width: 64.063rem;
+  width: 100%;
+  max-width: clamp(64.063rem, calc(59.522rem + 35.105vw), 97.5rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+}

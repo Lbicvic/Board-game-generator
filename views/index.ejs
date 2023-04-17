@@ -4,12 +4,16 @@
         <%- include("./partials/nav.ejs") %>
         <div class="board-games">
             <% if (BoardGames.length > 0) { %>
-                <% BoardGames.forEach(boardGame => { %>
-                    <a href="/boardGames/<%= boardGame._id %>" class="board-games__wrapper">
-                    <h3 class="title"><%= boardGame.title %></h3>
-                    <p class="description"><%= boardGame.description %></p>
-                    </a>
-                <% }) %>
+                <div class="board-games__wrapper layout__width">
+                    <% BoardGames.forEach(boardGame => { %>
+                        <div class="board-games__item">
+                            <a href="/boardGames/<%= boardGame._id %>">
+                                <h3 class="title"><%= boardGame.title %></h3>
+                                <p class="description"><%= boardGame.description %></p>
+                            </a>
+                        </div>
+                    <% }) %>
+                </div>
            <% } else { %>
                 <p>There are no board games to display...</p>
             <% } %>
