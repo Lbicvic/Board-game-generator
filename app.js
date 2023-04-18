@@ -14,9 +14,7 @@ app.set('views', `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public`));
 
 
-app.get("/",(req,res) =>{
-    res.redirect("/boardGames")
-})
+
 app.get("/about",(req,res) =>{
     res.render("about",{ title:"About" })
 })

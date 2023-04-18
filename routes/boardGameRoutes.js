@@ -2,6 +2,8 @@ const express = require("express");
 const BoardGameController = require("../controllers/boardGameController");
 const boardGameRouter = express.Router();
 
+boardGameRouter.get('/', BoardGameController.randomBoardGame);
+boardGameRouter.post('/', BoardGameController.randomBoardGame);
 boardGameRouter.get("/boardGames", BoardGameController.getBoardGames);
 boardGameRouter.get('/addBoardGame', BoardGameController.getBoardForm);
 boardGameRouter.get('/boardGames/:id', BoardGameController.getBoardGame);

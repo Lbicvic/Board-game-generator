@@ -2,12 +2,36 @@
     <div class="nav__wrapper">
         <ul>
             <div class="nav__content layout__width">
-                <h2><a href="/">Home</a></h2>
-                <div class="nav__links">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/addBoardGame">Add Board Game</a></li>
+                <div class="nav__desktop">
+                    <h2 class="nav_title"><a href="/">Home</a></h2>
+                    <div class="nav__links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/addBoardGame">Add Board Game</a></li>
+                        <li><a href="/boardGames">Board Games</a></li>
+                    </div>
+                </div>
+                <div class="nav__mobile">
+                    <div class="nav__mobile-content">
+                        <h2 class="nav_title"><a href="/">Home</a></h2>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="nav__menu">
+                        </a>
+                    </div>
+                    <div class="nav__links">
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/addBoardGame">Add Board Game</a></li>
+                        <li><a href="/boardGames">Board Games</a></li>
+                    </div>
                 </div>
             </div>
         </ul>
     </div>
 </nav>
+<script>
+    const hamburger = document.querySelector("a.nav__menu");
+    const mobileMenu = document.querySelector(".nav__mobile .nav__links");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+    });
+</script>

@@ -2,21 +2,18 @@
 
     <body>
         <%- include("./partials/nav.ejs") %>
-        <div class="board-games">
-            <% if (BoardGames.length > 0) { %>
-                <div class="board-games__wrapper layout__width">
-                    <% BoardGames.forEach(boardGame => { %>
-                        <div class="board-games__item">
-                            <a href="/boardGames/<%= boardGame._id %>">
-                                <h3 class="title"><%= boardGame.title %></h3>
-                                <p class="description"><%= boardGame.description %></p>
-                            </a>
-                        </div>
-                    <% }) %>
+        <div class="generated-board-game">
+            <div class="generated-board-game__wrapper layout__width">
+                <div class="board-games__item">
+                    <a href="/boardGames/<%= randomBoardGame[0]._id %>">
+                        <h3 class="title"><%= randomBoardGame[0].title %></h3>
+                        <p class="description"><%= randomBoardGame[0].description %></p>
+                    </a>
                 </div>
-           <% } else { %>
-                <p>There are no board games to display...</p>
-            <% } %>
+                <form action="/" method="post" class="board-games__form">
+                    <button class="generate-button"><p>Generate</p></button>
+                </div>
+            </div>
         </div>
     </body>
 </html>

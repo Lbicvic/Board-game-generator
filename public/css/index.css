@@ -11,9 +11,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-p{
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.6;
+.display-none {
+  display: none !important;
 }
