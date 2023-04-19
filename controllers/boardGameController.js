@@ -25,6 +25,7 @@ class BoardGameController {
             res.redirect("/boardGames");
         }).catch((error) => {
             console.log(error);
+            res.render('addBoardGame', { title: 'Board Game Generator', Error: 'Board Game already exists!' });
         })
     }
 

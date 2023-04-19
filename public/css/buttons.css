@@ -1,0 +1,60 @@
+.generate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5625rem 3.125rem;
+  background: #df2e38;
+  border-color: #df2e38;
+  border-radius: 0.75rem;
+  text-transform: uppercase;
+}
+
+.generate-button:hover {
+  background: #20262e;
+  border-color: #20262e;
+}
+
+.generate-button:hover p {
+  color: #df2e38;
+}
+
+.generate-button p,
+.form__add-button p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: clamp(1rem, calc(1.324rem + 0.751vw), 1.125rem);
+  line-height: 1.3;
+}
+.delete-button {
+  padding: 1rem;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  color: #333;
+  background: #dc0000;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: clamp(1rem, calc(1.324rem + 0.751vw), 1.5rem);
+  line-height: 1.3;
+}
+
+.delete-button:hover {
+  color: #dc0000;
+  background: #333;
+}
+
+.form__add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 3.125rem;
+  background: #888;
+  border-color: #888;
+  border-radius: 0.75rem;
+  text-transform: uppercase;
+}

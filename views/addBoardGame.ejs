@@ -4,12 +4,15 @@
         <%- include("./partials/nav.ejs") %>
         <div class="form">
             <div class="form__wrapper layout__width">
+                <% if (Error > 0) { %>
+                    <p><%= Error %></p>
+                <% } %>
                 <form action="/boardGames" method="post">
                     <label for="title">Title:</label>
-                    <input type="text" name="title" required>
+                    <input type="text" name="title" required placeholder="Input Title..." oninput="this.value = this.value.replace(/\b\w/g , function(letter){ return letter.toUpperCase(); } )">
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-                    <button type="submit" >Add Board Game</button>
+                    <textarea name="description" id="description" cols="30" rows="10" required placeholder="Input Description..."></textarea>
+                    <button type="submit" class="form__add-button"><p>Add Board Game</p></button>
                 </form>
             </div>
         </div>
