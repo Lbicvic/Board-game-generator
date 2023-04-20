@@ -1,3 +1,7 @@
+.board-game{
+  padding: 0 1.25rem;
+}
+
 .board-game__wrapper {
   display: flex;
   justify-content: space-between;
@@ -101,4 +105,9 @@
   .about {
     padding: 0 1.25rem;
   }
+
+  .board-game__wrapper{
+    flex-direction: column;
+    gap: 1rem;
+  }  
 }
