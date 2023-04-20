@@ -1,4 +1,4 @@
-.board-game{
+.board-game {
   padding: 0 1.25rem;
 }
 
@@ -68,7 +68,7 @@
   gap: 1rem;
 }
 
-.about__wrapper p{
+.about__wrapper p {
   margin: 0;
 }
 
@@ -106,8 +106,8 @@
     padding: 0 1.25rem;
   }
 
-  .board-game__wrapper{
+  .board-game__wrapper {
     flex-direction: column;
     gap: 1rem;
-  }  
+  }
 }

@@ -66,7 +66,8 @@
 }
 
 .nav__menu.active {
-  background: transparent url("/images/hamburger-icon-open.svg") no-repeat 0 center;
+  background: transparent url("/images/hamburger-icon-open.svg") no-repeat 0
+    center;
   background-size: contain;
 }
 
